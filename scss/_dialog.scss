@@ -1,0 +1,48 @@
+.dialog{
+    width: 100vw;
+    height: 40vh;
+    align-self: flex-end;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(0deg, rgba(0,0,0,0.9) 15%, rgba(255,255,255,0) 100%);
+    padding: 0 15%;
+    z-index: 20;
+    cursor: pointer;
+}
+
+.character{
+    width: 40vh;
+    height: 40vh;
+    margin-right: 5vh;
+    background: url("") no-repeat top center;
+    background-size: 100%;
+    background-position: top;
+}
+
+.dia_text{
+    width: 80vh;
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    margin-top: 15vh;
+}
+.name{
+    margin-bottom: 2vh;
+    font-size: 1.5rem;
+    color: #fff;
+}
+.content{
+    margin-bottom: 2vh;
+    font-size: 22px;
+}
+.close,.next{
+    color: #fff;
+    text-decoration: underline;
+    margin-left: auto;
+}
+
+.disable{
+    display: none;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>secondChapter_2</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/scene2_2.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+</head>
+
+<body>
+    <!-- 進場動畫 -->
+    <div id="intro_bg">
+        <p>3/30_10:00</p>
+        <p>礦場外空地</p>
+    </div>
+
+    <div id="control_instruction">
+        <img src="../image/intro/control_main.png" alt="">
+    </div>
+
+
+    <img src="../image/mine/mine_2/mine_2_back.png" alt="" id="back">
+    <img src="../image/mine/mine_2/mine_2_medium.png" alt="" id="medium">
+    <img src="../image/mine/mine_2/mine_2_front.png" alt="" id="front">
+
+    <img src="../image/character/boss.png" alt="" id="boss">
+    <img src="../image/character/assist.png" alt="" id="assist">
+
+
+    <a href="../html/intro.html"><img src="../image/intro/home_icon.png" alt="" id="home_icon"></a>
+
+
+    <!-- 礦工 -->
+    <div id="miner_container">
+        <img src="../image/character/main_stand.png" alt="礦工" id="miner">
+    </div>
+
+    <img src="../image/character/miner_group.png" alt="" id="miner_group">
+    <!-- 對話框 -->
+    <div class="dialog oldone disable">
+        <!-- 角色圖片 -->
+        <div class="character"></div>
+        <!-- 文字內容 -->
+        <div class="dia_text">
+            <!-- 角色名稱 -->
+            <h2 class="name"></h2>
+            <!-- 對話內容 -->
+            <p class="content">對我就是這是新進礦工，有什麼事嗎？.........</p>
+            </a>
+        </div>
+    </div>
+    <div id="end_bg"></div>
+    
+    <script src="../js/audio.js"></script>
+    <script src="../js/main_walk_2.js"></script>
+    <script src="../js/intro_anime.js"></script>
+    <script src="../js/new_scene.js"></script>
+
+
+</body>
+
+</html>

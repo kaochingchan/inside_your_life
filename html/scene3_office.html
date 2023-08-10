@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>thirdChapter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/scene3.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+</head>
+
+<body>
+
+    <div id="intro_bg">
+        <p>3/30_20:00</p>
+        <p>伊塔礦業公司辦公室</p>
+    </div>
+
+    <div id="control_instruction">
+        <img src="../image/intro/control_scene.png" alt="">
+    </div>
+
+    <div id="end_bg"></div>
+    <div id="outer_wrapper">
+        <!-- layer -->
+        <img src="../image/office/office_bg.png" alt="" id="back">
+        <img src="../image/character/assist.png" alt="" id="assist">
+        <img src="../image/character/boss.png" alt="" id="boss" class="freezeScroll">
+        <img src="../image/office/office_door_n.png" alt="" id="door">
+    </div>
+
+    <a href="../html/intro.html"><img src="../image/intro/home_icon.png" alt="" id="home_icon"></a>
+
+
+
+    <!-- 對話框 -->
+    <div class="dialog oldone disable">
+        <!-- 角色圖片 -->
+        <div class="character"></div>
+        <!-- 文字內容 -->
+        <div class="dia_text">
+            <!-- 角色名稱 -->
+            <h2 class="name"></h2>
+            <!-- 對話內容 -->
+            <p class="content">對我就是這是新進礦工，有什麼事嗎？.........</p>
+            </a>
+        </div>
+    </div>
+
+
+    <script src="../js/audio.js"></script>
+    <script src="../js/new_scene.js"></script>
+    <script src="../js/intro_anime.js"></script>
+    <script>
+        $("#boss").on("click",function(){
+            $(this).css("animation","none");
+            $(this).css("cursor","auto");
+        })
+    </script>
+</body>
+
+</html>

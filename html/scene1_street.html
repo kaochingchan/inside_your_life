@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>firstChapter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/scene1.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+</head>
+
+<body>
+
+
+    <!-- 背景底色 -->
+    <div id="bg_color"></div>
+    <!-- 場景 -->
+    <img src="../image/street/street_back.png" alt="背景" id="back" class="bg">
+
+
+
+    <div id="container_back">
+        <img src="../image/street/street_light_glitch.png" alt="" id="light">
+    </div>
+
+    <img src="../image/street/street_front.png" alt="前景" id="front">
+
+
+    <!-- 互動性物件container -->
+    <div id="container">
+        <img src="../image/street/street_flyer.png" alt="傳單" id="flyer" class="scale_anime">
+        <img src="../image/street/street_vendor.png" alt="販賣機" id="vendor" class="scale_anime">
+        <img src="../image/character/main_past.png" alt="主角過往" id="miner">
+
+        <a href="../html/intro.html"><img src="../image/intro/home_icon.png" alt="" id="home_icon"></a>
+
+
+
+        <div class="interactive_item disable">
+            <!-- 物件圖片 -->
+            <img src="../image/interact_detail/vendor_detail.png" alt="" class="interactive_img">
+            <!-- 標題 -->
+            <h2 id="heading">頭盔</h2>
+            <!-- 內文 -->
+            <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, beatae eaque?
+                Voluptatibus, animi sed id commodi pariatur officiis quam, totam sapiente modi minus magni nobis velit
+                hic aspernatur sit perspiciatis.</p>
+        </div>
+
+        <!-- 對話框 -->
+        <div class="dialog oldone disable">
+            <!-- 角色圖片 -->
+            <div class="character"></div>
+            <!-- 文字內容 -->
+            <div class="dia_text">
+                <!-- 角色名稱 -->
+                <h2 class="name">主角</h2>
+                <!-- 對話內容 -->
+                <p class="content">對我就是這是新進礦工，有什麼事嗎？.........</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="intro_bg">
+        <p>7號元宇宙某街巷中</p>
+    </div>
+
+    <div id="end_bg"></div>
+
+
+
+    <script src="../js/audio.js"></script>
+    <script src="../js/new_scene.js"></script>
+    <script src="../js/intro_anime.js"></script>
+    <script src="../js/street_click.js"></script>
+</body>
+
+</html>

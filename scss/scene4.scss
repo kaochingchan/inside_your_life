@@ -1,0 +1,172 @@
+@mixin hover_obj {
+    &:hover{
+        filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.4));
+        transform: scale(1.01);
+    }
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,p{
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    display: flex;
+    padding: 0;
+    max-height: 100vh;
+    width: 100%;
+    height: 100vh;
+    overflow: scroll;
+    justify-content: center;
+    align-items: center;
+}
+
+#container{
+    width: 177.7vh;
+    height: 100vh;
+    position: absolute;
+    z-index: 10;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+//z-index順序
+//back:1
+//news:3
+//doc1:4
+//doc2:5
+//chair:6
+//demo:7
+//drink:8
+//container:10
+#bg_color{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(27, 27, 27);
+    z-index: 0;
+}
+
+#back{
+    width: 177.7vh;
+    height: 100vh;
+    position: absolute;
+    z-index: 1;
+}
+
+@import "./intro_bg";
+
+@keyframes scale_shine{
+    0% {
+        transform: scale(1.02);
+        filter: drop-shadow(5px 5px 5px rgba(255, 234, 117, 0.493));
+    }
+    50% {
+        transform: scale(1);
+        filter: drop-shadow(0px 0px 0px rgba(255, 234, 117, 0.493));
+    }
+    100% {
+        transform: scale(1.02);
+        filter: drop-shadow(5px 5px 5px rgba(255, 234, 117, 0.493));
+    }
+}
+
+@mixin scale_anime {
+    animation: scale_shine 1.5s infinite;
+}
+
+.scale_anime{
+    animation: scale_shine 1.5s infinite;
+}
+
+
+
+#news{
+    width: calc(56.7vh*0.95);
+    height: calc(37.8vh*0.95);
+    top: 5vh;
+    left: 20vh;
+    position: absolute;
+    z-index: 3;
+    cursor: pointer;
+    @include hover_obj;
+}
+#doc1{
+    width: calc(40vh*0.92);
+    height: calc(31.8vh*0.92);
+    position: absolute;
+    top: 7.7vh;
+    left: 75.4vh;
+    z-index: 4;
+    cursor: pointer;
+    @include hover_obj;
+}
+#doc2{
+    width: calc(28.5vh*0.9);
+    height: calc(15.3vh*0.9);
+    position: absolute;
+    top: 21vh;
+    left: 114.3vh;
+    z-index: 5;
+    cursor: pointer;
+    @include hover_obj;
+}
+
+#chair{
+    width: calc(40.5vh*0.95);
+    height: calc(78.4vh*0.95);
+    position: absolute;
+    top: 19vh;
+    left: 72vh;
+    z-index: 6;
+}
+#demo{
+    width: calc(6.8vh);
+    height: calc(9.2vh);
+    position: absolute;
+    top: 23vh;
+    left: 20vh;
+    z-index: 7;
+}
+#drink{
+    width: calc(17.6vh);
+    height: calc(16.8vh);
+    position: absolute;
+    top: 25vh;
+    left: 119vh;
+    z-index: 8;
+}
+
+@import "./interact";
+@import "./home_icon";
+
+
+#home_icon{
+    left: 6vh;
+}
+
+.interactive_img {
+    height: calc(45.3vh*0.6);
+}
+
+.vh{
+    height: 100%;
+    width: auto;
+}
+
+.none{
+    display: none;
+}
+
+
+

@@ -1,0 +1,204 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,p{
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+@mixin phone {
+    @media (max-width:550px) {
+        @content;
+        
+    }
+}
+@mixin hover_obj {
+    &:hover{
+        filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.4));
+        transform: scale(1.01);
+    }
+}
+@keyframes scale_shine{
+    0% {
+        transform: scale(1.02);
+        filter: drop-shadow(0px 5px 5px rgba(255, 234, 117, 0.493));
+    }
+    50% {
+        transform: scale(1);
+        filter: drop-shadow(0px 0px 0px rgba(255, 234, 117, 0.493));
+    }
+    100% {
+        transform: scale(1.02);
+        filter: drop-shadow(0px 5px 5px rgba(255, 234, 117, 0.493));
+    }
+}
+
+@mixin scale_anime {
+    animation: scale_shine 1.5s infinite;
+}
+
+html{
+    height: 100%;
+}
+body{
+    display: flex;
+    padding: 0;
+    max-height: 100vh;
+    width: 100%;
+    overflow: scroll;
+    position: relative;
+    @include phone{
+    }
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+// z-index
+// 背景：0
+// 中景：2
+// 礦工：3
+// 前景：5
+// 老礦工：9
+// 山洞：4
+// 頭盔：8
+// 礦車：7
+// 守則：9
+//垂直滾動
+@import "./horizional";
+
+#back{
+    width: 648.148vh;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    z-index: 0;
+
+    @include phone{
+    }
+}
+
+
+#miner_container{
+    width: 177.7vh;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0% 10%;
+    position: fixed;
+    z-index: 4;
+
+    #miner{
+    width:calc(30.3vh * 0.58);
+    height: calc(70.8vh * 0.58);
+    position: absolute;
+    left: 50vh;
+    top: 45vh;
+
+    /* 添加暫停 */
+    /* animation-play-state: paused; */
+    @include phone{
+    }
+    @include hover_obj;
+}
+}
+
+.miner_walk{
+    width: calc(57.5vh*0.58);
+    height: calc(77.5vh*0.58);
+}
+
+#medium{
+    width: 648.148vh;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    @include phone{
+    }
+}
+
+#hole{
+    width: 648.148vh;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 4;
+    @include phone{
+        
+    }
+}
+
+#minecart{
+    width:calc(30.5vh * 0.72);
+    height: calc(30vh * 0.72);
+    position: absolute;
+    left: 165vh;
+    top: 70vh;
+    z-index: 7;
+    @include hover_obj;
+    @include scale_anime;
+    cursor: pointer;
+}
+
+#oldminer{
+    width: calc(53vh*0.35);
+    height: calc(93.1vh*0.35);
+    position: absolute;
+    left: 135vh;
+    top: 56vh;
+    z-index: 9;
+    @include hover_obj;
+    @include scale_anime;
+    cursor: pointer;
+}
+#helmet{
+    width:calc(12.5vh*0.85);
+    height: calc(10.5vh*0.85);
+    position: absolute;
+    left: 160.5vh;
+    top: 66.5vh;
+    z-index:  8;
+    cursor: pointer;
+    @include hover_obj;
+    @include scale_anime;
+    cursor: pointer;
+}
+
+#rule{
+    width:calc(12vh*0.8);
+    height: calc(23.7vh*0.8);
+    position: absolute;
+    left: 236vh;
+    top: 55vh;
+    z-index: 9;
+    @include hover_obj;
+    @include scale_anime;
+    cursor: pointer;
+}
+#front{
+    width: 648.148vh;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 5;
+    @include phone{
+        height: 100%
+    }
+}
+
+@import "./dialog";
+@import "./interact";
+
+.interactive_item {
+    width: 100%;
+}
+
+.interactive_img{
+    height: calc(40vh);
+}

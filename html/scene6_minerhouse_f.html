@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>theEnd_f</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+    <link rel="stylesheet" href="../css/scene6.css">
+</head>
+
+<body>
+    <div id="intro_bg">
+        <p>經過一番折騰，礦工終於回家</p>
+    </div>
+    <div id="end_bg"></div>
+    <div id="bg_color"></div>
+    <img src="../image/miner_home/miner_home_back.png" alt="" id="back">
+    <img src="../image/miner_home/miner_home_front.png" alt="" id="front">
+    <div id="container">
+        <img src="../image/miner_home/bill.png" alt="帳單" id="bill" class="interact_click">
+        <img src="../image/miner_home/newspaper.png" alt="報紙" id="newspaper" class="interact_click">
+        <img src="../image/character/main_present.png" alt="礦工" id="miner">
+        <a href="../html/intro.html"><img src="../image/intro/home_icon.png" alt="" id="home_icon"></a>
+
+        <div class="interactive_item disable">
+            <!-- 物件圖片 -->
+            <img src="../image/interact_detail/newspaper_detail.png" alt="" class="interactive_img">
+            <!-- 標題 -->
+            <h2 id="heading">報紙</h2>
+            <!-- 內文 -->
+            <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, beatae eaque?
+                Voluptatibus, animi sed id commodi pariatur officiis quam, totam sapiente modi minus magni nobis velit
+                hic aspernatur sit perspiciatis.</p>
+        </div>
+        <!-- 對話框 -->
+        <div class="dialog oldone disable">
+            <!-- 角色圖片 -->
+            <div class="character"></div>
+            <!-- 文字內容 -->
+            <div class="dia_text">
+                <!-- 角色名稱 -->
+                <h2 class="name"></h2>
+                <!-- 對話內容 -->
+                <p class="content">對我就是這是新進礦工，有什麼事嗎？.........</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div id="end">
+        <div id="end_block">
+            <h1 id="end_title" class="end_anime_1">製作人員名單</h1>
+            <h1 class="end_anime_1">美術組</h1>
+            <h2 class="end_anime_1">許佑誠/甘蕙禎/羅郁茹</h2>
+            <h1 class="end_anime_1">開發組</h1>
+            <h2 class="end_anime_1">高慶展/周育賢</h2>
+            <div id="play_again">
+                再玩一次
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/audio.js"></script>
+    <script src="../js/new_scene.js"></script>
+    <script src="../js/intro_anime.js"></script>
+    <script src="../js/minerhouse_click.js"></script>
+</body>
+
+</html>

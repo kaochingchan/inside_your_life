@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>storyboard_false</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/storyboard_f.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+
+</head>
+
+<body>
+    <!-- 進場 -->
+    <div id="intro_bg"></div>
+    <!-- 背景色 -->
+    <div id="bg_color"></div>
+
+    <div id="container">
+        <img src="../image/story_board_false/cut1.png" alt="場景一" id="cut1" class="bg">
+        <img src="../image/story_board_false/cut2.png" alt="場景二" id="cut2" class="bg">
+        <img src="../image/story_board_false/cut3.png" alt="場景三" id="cut3" class="bg">
+        
+        <!-- logo位置 -->
+        <div id="cut4_logo" class="bg">
+            <img src="../image/story_board_false/cut4_logo.png" alt=""  id="cut4_innerlogo">
+        </div>
+        <img src="../image/story_board_false/cut4.png" alt="場景四" id="cut4" class="bg">
+    
+        <img src="../image/story_board_false/cut5.png" alt="場景五" id="cut5" class="bg">
+        <img src="../image/story_board_false/cut6.png" alt="場景六" id="cut6" class="bg">
+        
+
+        <a href="../html/intro.html"><img src="../image/intro/home_icon.png" alt="" id="home_icon"></a>
+
+        <div id="text" class="dialog">
+            <p class="content">主角仍在礦場工作，或著說被壓榨。</p>
+            <a href="#" id="next">
+                <p>next</p>
+            </a>
+        </div>
+    </div>
+
+    <!-- 退場 -->
+    <div id="end_bg"></div>
+
+    <script src="../js/audio.js"></script>
+    <script src="../js/storyboard_f.js"></script>
+    <script src="../js/new_scene.js"></script>
+    <script>
+        var tl = gsap.timeline({ default: { duration: 4.5 } });
+        tl.to("#intro_bg", { duration: 4, opacity: 0, delay: 0.5 });
+        setTimeout(() => {
+            $("#intro_bg").css("display", "none");
+        }, 4500);
+    </script>
+</body>
+
+</html>

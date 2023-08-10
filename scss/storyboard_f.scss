@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,p{
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+#container{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 14;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#bg_color{
+    width: 100%;
+    height: 100%;
+    background-color: #1b1b1b;
+    position: fixed;
+    z-index: 0;
+}
+
+@import "./intro_bg";
+
+@import "./home_icon";
+#home_icon{
+    left: 7vh;
+}
+
+/*#region image*/
+#cut1{
+    z-index: 11;
+}
+#cut2{
+    z-index: 10;
+}
+
+#cut3{
+    z-index: 9;
+}
+
+.bg{
+    position: fixed;
+    width: 177.7vh;
+    height: 100vh;
+}
+
+#cut4_logo{
+    width: 100%;
+    height: 100%;
+    z-index: 8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cut4_innerlogo{
+    opacity: 100%;
+}
+
+#cut4{
+    z-index: 7;
+}
+
+#cut5{
+    z-index: 6;
+}
+#cut6{
+    z-index: 5;
+}
+/*#endregion*/
+
+
+
+#text{
+    width: 177.7vh;
+    margin-bottom: auto;
+    align-self: flex-end;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    padding: 8vh;
+    background: rgba(0, 0, 0, 0.2);
+    color: white;
+    font-size: 24px;
+    z-index: 13;
+
+    #next{
+        color: white;
+    }
+}
+
+

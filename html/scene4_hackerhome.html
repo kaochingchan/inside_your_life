@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forthChapter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+    <link rel="stylesheet" href="../css/scene4.css">
+</head>
+
+<body>
+    <div id="intro_bg">
+        <p>3/31_01:00</p>
+        <p>駭客房間</p>
+    </div>
+    <div id="end_bg"></div>
+    <!-- 背景底色 -->
+    <div id="bg_color"></div>
+    <!-- layer -->
+    <img src="../image/hacker_home/hacker_home_back.png" alt="背景" id="back">
+
+    <!-- 互動性物件container -->
+    <div id="container">
+        <img src="../image/hacker_home/news.png" alt="新聞" id="news" class="scale_anime">
+        <img src="../image/hacker_home/doc1.png" alt="文件一" id="doc1">
+        <img src="../image/hacker_home/doc2.png" alt="文件二" id="doc2" class="scale_anime">
+        <img src="../image/hacker_home/hacker_home_chair.png" alt="椅子" id="chair">
+        <img src="../image/hacker_home/hacker_home_demo.png" alt="便條紙" id="demo">
+        <img src="../image/hacker_home/hacker_home_drink.png" alt="飲料" id="drink">
+    </div>
+
+    <a href="../html/intro.html"><img src="../image/intro/home_icon.png" alt="" id="home_icon"></a>
+
+
+    <!-- 互動性物件 -->
+    <div class="interactive_item dialog disable">
+        <!-- 物件圖片 -->
+        <img src="" alt="" class="interactive_img">
+        <!-- 標題 -->
+        <h2 id="heading">頭盔</h2>
+        <!-- 內文 -->
+        <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, beatae eaque?
+            Voluptatibus, animi sed id commodi pariatur officiis quam, totam sapiente modi minus magni nobis velit hic
+            aspernatur sit perspiciatis.</p>
+    </div>
+
+
+    <script src="../js/audio.js"></script>
+    <script src="../js/new_scene.js"></script>
+    <script src="../js/hackerhome_click.js"></script>
+    <script src="../js/intro_anime.js"></script>
+
+</html>

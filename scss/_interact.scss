@@ -1,0 +1,29 @@
+.interactive_item {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 177.7vh;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0% 10%;
+    position: fixed;
+    z-index: 80;
+    color: #fff;
+    cursor: pointer;
+}
+.interactive_item h2 {
+    margin-top: 1vh;
+}
+.content{
+    font-size: 22px;
+    margin-top: 1vh;
+}
+
+.leave {
+    color: #fff;
+    font-size: 1.2rem;
+}
+.disable {
+    display: none;
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>secondChapter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/scene2_1.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+</head>
+
+<body>
+    <!-- 進場動畫 -->
+    <div id="intro_bg">
+        <p>1/24_10:00</p>
+        <p>伊塔礦業礦場</p>
+    </div>
+
+    <div id="control_instruction">
+        <img src="../image/intro/control_main.png" alt="">
+    </div>
+
+
+    <!-- 離場動畫 -->
+    <div id="end_bg"></div>
+
+    <!-- 場景 -->
+    <img src="../image/mine/mine_1/mine_1_back.png" alt="" id="back">
+    <img src="../image/mine/mine_1/mine_1_front.png" alt="" id="front">
+    <img src="../image/mine/mine_1/mine_1_medium.png" alt="" id="medium">
+
+    <!-- 礦工 -->
+    <div id="miner_container">
+        <img src="../image/character/main_stand.png" alt="礦工" id="miner">
+    </div>
+    <img src="../image/character/old_miner.png" alt="老礦工" id="oldminer">
+
+    <img src="../image/mine/mine_1/mine_1_hole.png" alt="" id="hole">
+    <img src="../image/mine/rule.png" alt="" id="rule">
+    <img src="../image//mine/helmet.png" alt="" id="helmet" class="freezeScroll">
+    <img src="../image//mine/minecraft.png" alt="" id="minecart">
+
+    <a href="../html/intro.html"><img src="../image/intro/home_icon.png" alt="" id="home_icon"></a>
+
+
+    <!-- 對話框 -->
+    <div class="dialog oldone disable">
+        <!-- 角色圖片 -->
+        <div class="character"></div>
+        <!-- 文字內容 -->
+        <div class="dia_text">
+            <!-- 角色名稱 -->
+            <h2 class="name">主角</h2>
+            <!-- 對話內容 -->
+            <p class="content">對我就是這是新進礦工，有什麼事嗎？.........</p>
+        </div>
+    </div>
+
+    <!-- 互動性物件 -->
+    <div class="interactive_item disable">
+        <!-- 物件圖片 -->
+        <img src="../image/mine/helmet.png" alt="" class="interactive_img">
+        <!-- 標題 -->
+        <h2 id="heading">頭盔</h2>
+        <!-- 內文 -->
+        <p class="content"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, beatae eaque?
+            Voluptatibus, animi sed id commodi pariatur officiis quam, totam sapiente modi minus magni nobis velit hic
+            aspernatur sit perspiciatis.</p>
+    </div>
+
+    <script src="../js/audio.js"></script>
+    <script src="../js/main_walk_2.js"></script>
+    <!-- <script src="../js/fixed_window.js"></script> -->
+    <script src="../js/new_scene.js"></script>
+    <script src="../js/intro_anime.js"></script>
+    <script>
+        $("#oldminer").on("click", function () {
+            $(this).css("animation", "none")
+        });
+        $("#helmet").on("click", function () {
+            $(this).css("animation", "none")
+        });
+        $("#rule").on("click", function () {
+            $(this).css("animation", "none")
+        });
+        $("#minecart").on("click", function () {
+            $(this).css("animation", "none")
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fifthChapter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/scene5.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+</head>
+<body>
+    <!-- 進出場景 -->
+    <div id="intro_bg">
+        <p>5/24_04:20</p>
+        <p>礦場補給站</p>
+    </div>
+
+    <div id="control_instruction">
+        <img src="../image/intro/control_main.png" alt="">
+    </div>
+
+
+    <!-- 背景底色 -->
+    <div id="bg_color"></div>
+    <!-- 場景 -->
+    <img src="../image/store/store_back.png" alt="" id="back">
+    <img src="../image/store/store_medium.png" alt="" id="medium">
+
+
+    <!-- 互動性物件container -->
+    <div id="container">
+        <img src="../image/store/telephone.png" alt="電話" id="telephone">
+        <img src="../image/character/main_stand.png" alt="主角" id="miner">
+        <img src="../image/store/light.png" alt="燈光" id="light">
+        <img src="../image/store/store_front.png" alt="加油機台" id="front">
+    </div>
+    <!-- 互動性物件 -->
+    <div class="interactive_item disable">
+        <!-- 物件圖片 -->
+        <img src="../image/interact_detail/telephone_detail.png" alt="" class="interactive_img">
+        <!-- 標題 -->
+        <h2 id="heading">電話</h2>
+        <!-- 內文 -->
+        <p class="content">Text</p>
+    </div>
+
+    <a href="../html/intro.html"><img src="../image/intro/home_icon.png" alt="" id="home_icon"></a>
+
+
+    <!-- 選擇視窗 -->
+    <div id="choice">
+        <div id="btn_block">
+            <h1>是否要幫助駭客執行任務？</h1>
+            <div id="choice_btn">
+                <div id="choice_y">幫忙</div>
+                <div id="choice_n">不幫忙</div>
+            </div>
+        </div>
+    </div>
+    <div id="content_block">
+        <p id="content_text">文本在這</p>
+    </div>
+
+    <div id="fade_out" class="none"></div>
+    
+    <script src="../js/audio.js"></script>
+    <script src="../js/main_walk.js"></script>
+    <script src="../js/new_scene.js"></script>
+    <script src="../js/intro_anime.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,p{
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+html{
+    height: 100%;
+}
+body{
+    display: flex;
+    padding: 0;
+    max-height: 100vh;
+    width: 100%;
+    overflow: scroll;
+    position: relative;
+
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+@import "./intro_bg";
+//場景
+#back{
+    width: 254.62vh;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    z-index: 0;
+}
+
+#medium{
+    width: 254.62vh;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+}
+
+#hole{
+    width: 254.62vh;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 4;
+}
+
+#front{
+    width: 254.62vh;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 5;
+}
+
+
+
+#miner_container{
+    width: 177.7vh;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0% 5%;
+    position: fixed;
+    z-index: 8;
+
+    #miner{
+    width:calc(30.3vh * 0.6);
+    height: calc(70.8vh * 0.6);
+    position: absolute;
+    left: 50vh;
+    top: 35vh;
+
+    /* 添加暫停 */
+    /* animation-play-state: paused; */
+}
+}
+
+
+#miner_group{
+    width: calc(93.9vh*0.52);
+    height: calc(94vh*0.52);
+    position: absolute;
+    z-index: 6;
+    left: 80vh;
+    top: 27vh;
+}
+
+
+@mixin hover_obj {
+    &:hover{
+        filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.4));
+        transform: scale(1.01);
+    }
+}
+@keyframes scale_shine{
+    0% {
+        transform: scale(1.02);
+        filter: drop-shadow(0px 5px 5px rgba(255, 234, 117, 0.493));
+    }
+    50% {
+        transform: scale(1);
+        filter: drop-shadow(0px 0px 0px rgba(255, 234, 117, 0.493));
+    }
+    100% {
+        transform: scale(1.02);
+        filter: drop-shadow(0px 5px 5px rgba(255, 234, 117, 0.493));
+    }
+}
+
+@mixin scale_anime {
+    animation: scale_shine 1.5s infinite;
+}
+
+#boss{
+    width: calc(31.6vh*0.55);
+    height: calc(96.7vh*0.55);
+    position: absolute;
+    left: 168vh;
+    top: 18vh;
+    z-index: 10;
+    @include hover_obj;
+    @include scale_anime;
+    cursor: pointer;
+}
+
+#assist{
+    width: calc(30.4vh*0.48);
+    height: calc(84.2vh*0.48);
+    position: absolute;
+    left: 154vh;
+    top: 27vh;
+    z-index: 6;
+    transform: rotateY(180deg);
+}
+
+@import "./dialog";
+@import "./home_icon";
+
+#control_instruction{
+    position: fixed;
+    z-index: 20;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(26, 26, 26, 0.644);
+}
+
+
+.none{
+    display: none;
+}

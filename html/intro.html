@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>intro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+    <link rel="stylesheet" href="../css/intro.css">
+</head>
+
+<body>
+    <div id="device_warn">
+        <img src="../image//character/main_present.png" alt="">
+        <p>請使用電腦以獲得最佳遊戲體驗</p>
+    </div>
+    <div id="bg_color"></div>
+
+    <div id="intro">
+        <img src="../image/intro/intro_bg.png" alt="" id="intro_bg">
+        <img src="../image/intro/intro_logotype.png" alt="" id="intro_logotype">
+        <img src="../image/intro/intro_main.png" alt="" id="intro_main">
+        <img src="../image/intro/intro_oldminer.png" alt="" id="intro_oldminer">
+        <img src="../image/intro/intro_btn.png" alt="" id="intro_btn">
+        <img src="../image/intro/earphone.png" alt="" id="earphone">
+    </div>
+
+    <div id="recap">
+        <p class="anime_1">閃著霓虹的大都市在夜晚裡仍不止息的散發著活力，</p>
+        <p class="anime_1">如日不落城般輻射著繁華，繁華到令人醉生夢死的地步，</p>
+        <p class="anime_1">然而在這閃著光芒的表面下不盡然都是美好的。</p>
+    </div>
+
+    <div id="recap_2">
+        <p class="anime_2">這裡是第7號元宇宙</p>
+        <p class="anime_2">是目前唯一一個仍未被任一企業給完全掌控的原生元宇宙伺服器</p>
+        <p class="anime_2">然而這裡早已被各個巨大經濟體盤踞，被完全掌控是遲早的事</p>
+    </div>
+
+    <div id="recap_3">
+        <p class="anime_3">現實世界裡的政府皆無法插手元宇宙裡發生的事</p>
+        <p class="anime_3">在元宇宙裡，越能發揮影響力的經濟體</p>
+        <p class="anime_3">就越有人願意依附，從而鞏固自己的權力</p>
+        <p class="anime_3">有如一個原生宇宙般，上演了一個一模一樣的歷史</p>
+    </div>
+
+    <div id="recap_4">
+        <p class="anime_4">因此在這裡，各個經濟體發展出了自己的國家</p>
+        <p class="anime_4">互相彼此爭鬥、廝殺，這不過只是老生常談罷了......</p>
+    </div>
+
+    <div id="instruction">
+        <img src="../image/intro/inst_1.png" alt="指導" id="inst_img">
+        <img src="../image/character/main_walk.gif" alt="" id="walk_eg">
+        <img src="../image/character/old_miner.png" alt="閃爍示範" id="shine_eg">
+        <img src="../image/intro/enter_game_btn.png" alt="" id="enter_game">
+    </div>
+
+
+    <script>
+        $(document).ready(function () {
+            // 動畫時間軸設置
+            var intro = gsap.timeline({ default: { duration: 5 } });
+            intro.from("#intro_main", { duration: 1, y: 200, opacity: 0 });
+            intro.from("#intro_oldminer", { duration: 1, y: 50, opacity: 0 });
+            intro.from("#intro_logotype", { duration: 1, y: -50, opacity: 0 })
+            intro.from("#intro_btn", { duration: .5, opacity: 0, });
+            intro.from("#earphone", { duration: .5, opacity: 0, })
+            
+
+            var intro_out = gsap.timeline({ default: { duration: 1 } });
+            intro_out.to("#intro", { duration: 1, opacity: 0, ease: Linear.easeInOut });
+
+
+            var tl = gsap.timeline({ default: { duration: 37 } });
+            tl.from('.anime_1', { opacity: 0, y: 80, duration: 1.2, stagger: .7 });
+            tl.to('.anime_1', {  y: -30, duration: 1});
+            tl.to('.anime_1', { opacity: 0, y: -80, duration: 0.6, stagger: .6 });
+            tl.from('.anime_2', { opacity: 0, y: 80, duration: 1.2, stagger: .7 });
+            tl.to('.anime_2', {  y: -30, duration: 1});
+            tl.to('.anime_2', { opacity: 0, y: -80, duration: 0.6, stagger: .6 });
+            tl.from('.anime_3', { opacity: 0, y: 80, duration: 1.2, stagger: .7 });
+            tl.to('.anime_3', { y: -30, duration: 1});
+            tl.to('.anime_3', { opacity: 0, y: -80, duration: 0.6, stagger: .6 });
+            tl.from('.anime_4', { opacity: 0, y: 80, duration: 2 });
+            tl.to('.anime_4', {  y: -30, duration: 1});
+            tl.to('.anime_4', { opacity: 0, y: -80, duration: 0.6, stagger: .6 });
+            tl.from("#instruction", { opacity: 0, duration: 0.6 })
+
+
+
+            var enter = gsap.timeline({ default: { duration: 1 } })
+            enter.to("#instruction", { opacity: 0, duration: 1 });
+
+            $("#intro_btn").on("click", function () {
+                TweenMax.to($("#intro"), 1, { css: { opacity: 0 } });
+                setTimeout(() => {
+                    $("#intro").addClass("none");
+                }, 1000);
+                tl.play().delay(1.5);
+            });
+
+
+
+
+            $("#enter_game").on("click", function () {
+                enter.play();
+                setTimeout("javascript:location.href='../html/scene1_street.html'", 1000);
+                console.log("1");
+            })
+
+
+
+            tl.progress(0).pause();
+            intro_out.progress(0).pause();
+            enter.progress(0).pause();
+        });
+
+    </script>
+    <script src="../js/audio.js"></script>
+</body>
+
+</html>

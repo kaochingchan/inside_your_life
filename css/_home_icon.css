@@ -1,0 +1,9 @@
+#home_icon {
+  background-image: url("../image/intro/home_icon.png");
+  width: 10vh;
+  height: 10vh;
+  position: fixed;
+  z-index: 888;
+  top: 20vh;
+  left: 200vh;
+}

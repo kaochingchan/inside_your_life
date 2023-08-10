@@ -1,0 +1,12 @@
+#home_icon{
+    width: 8vh;
+    height: 8vh;
+    position: fixed;
+    z-index: 888;
+    top: 5vh;
+    left: 5vh;
+    &:hover{
+        cursor: pointer;
+        filter: drop-shadow(1,1,1,0.5);
+    }
+}
